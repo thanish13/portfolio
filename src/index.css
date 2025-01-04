@@ -4,7 +4,7 @@
 
 @layer utilities {
 	.bg-clip {
-		-webkit-mask-image: url("/assets/overlay.svg"), linear-gradient(rgba(255, 255, 255, 0.87),0 0);
+		-webkit-mask-image: url("/assets/overlay.svg"), linear-gradient(#101010 0 0);
 		mask-position: center;
 		mask-repeat: repeat;
 		mask-mode: alpha;
@@ -20,7 +20,7 @@
 	font-weight: 400;
 
 	color: rgba(255, 255, 255, 0.87);
-	background-color: rgba(255, 255, 255, 0.87);
+	background-color: #000000;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;

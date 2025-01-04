@@ -1,9 +1,11 @@
 import Logo from "./components/Logo";
 import { useEffect, useRef, useState } from "react";
+import ContainerRight from "./components/ContainerRight";
 import Background from "./components/background/Background";
 import useSessionStorage from "./hooks/useSessionStorage";
+import projectsDb from "./configs/projects.json";
 
-const defaultImagesToPreload = ["/assets/image.png", "/assets/react.svg"];
+const defaultImagesToPreload = ["/assets/LogoBG.png", "/assets/LogoLetter.png"];
 
 const preloadImage = (url) => {
 	const img = new Image();
@@ -12,6 +14,10 @@ const preloadImage = (url) => {
 
 const preloadImages = () => {
 	defaultImagesToPreload.forEach((url) => preloadImage(url));
+	projectsDb.forEach((item) => {
+		preloadImage(item.thumbnail);
+		preloadImage(item.images[0]);
+	});
 };
 
 function Home() {
@@ -36,6 +42,8 @@ function Home() {
 					setPerformanceMode={setPerformanceMode}
 				/>
 			</section>
+			{/* Show projects and about container */}
+			{introAnimationOver && <ContainerRight mainRef={ref} performanceMode={performanceMode} />}
 		</main>
 	);
 }

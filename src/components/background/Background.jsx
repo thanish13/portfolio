@@ -35,7 +35,7 @@ const Background = ({ performanceMode }) => {
 			transition={{ delay: fastAnimation ? 1.4 : 3.5, duration: 2, ease: "easeInOut" }}
 			className="w-full h-full hidden tablet:block fixed overflow-hidden">
 			{/* Background line colors */}
-			<div className="w-full h-full bg-[#111111] fixed -z-[3]" />
+			<div className="w-full h-full bg-[#000000] fixed -z-[3]" />
 			{/* Animate glowing lights that move on the background */}
 			{!performanceMode && (
 				<>

@@ -1,9 +1,12 @@
 import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
+import AnimatedText from "./AnimatedText";
 import { useLocation } from "react-router-dom";
+import icons from "../configs/icons.json";
 import useSessionStorage from "../hooks/useSessionStorage";
 import useCheckMobile from "../hooks/useCheckMobile";
+import IconLinks from "./IconLinks";
 import { cn } from "../../lib/utils";
 
 // Animation variants
@@ -112,13 +115,49 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 						{/* Inner logo letter */}
 						<img
 							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
-							src="assets/react.svg"
+							src="assets/LogoLetter.png"
 							alt="W letter logo"
 							draggable="false"
 						/>
 					</Tilt>
 				</motion.div>
-			
+				{/* Show socials, name, title and performance option below logo */}
+				{firstLayoutAnimationComplete && (
+					<>
+						<IconLinks icons={icons.socials} direction={-20} />
+						{/* Name and title */}
+						<div className="relative w-full flex flex-col items-center justify-center">
+							<AnimatedText
+								text="Thanish"
+								delay={0.9}
+								duration={fastAnimation ? 1 : 3}
+								style="text-5xl leading-none opacity-90"
+							/>
+							<AnimatedText
+								text="/ Web Developer"
+								delay={fastAnimation ? 2.1 : 3}
+								duration={0.2}
+								style="text-xl leading-none opacity-50"
+							/>
+							<motion.button
+								initial={{ y: -12, opacity: 0 }}
+								animate={{ y: 0, opacity: 1 }}
+								transition={{ duration: 1.4, delay: 2.8, ease: "easeInOut" }}
+								className="group absolute -bottom-12 text-[0.68rem]"
+								onClick={handlePerformanceButtonClick}>
+								<div className="p-2 bg-primary rounded-md opacity-50 group-hover:opacity-100 duration-200">
+									<p
+										className={cn(
+											"group-hover:opacity-80 duration-200",
+											performanceMode && "text-green-400"
+										)}>
+										Toggle performance mode
+									</p>
+								</div>
+							</motion.button>
+						</div>
+					</>
+				)}
 			</motion.div>
 		</motion.div>
 	);

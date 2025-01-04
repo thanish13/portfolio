@@ -13,7 +13,7 @@ export default {
 		},
 		extend: {
 			colors: {
-				background: "#D2A754",
+				background: "#101010",
 				primary: "#191919",
 				secondary: "#2A2A2A",
 				tertiary: "#8B8B8B",
@@ -80,5 +80,7 @@ export default {
 		},
 	},
 	plugins: [
+		tailwindcss3d,
+		tailwindScrollbar({ nocompatible: true, preferredStrategy: "pseudoelements" }),
 	],
 };
