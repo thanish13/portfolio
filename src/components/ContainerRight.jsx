@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
+import Blog from "./blog/Blog";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -29,16 +30,24 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
-					{location.pathname === "/about" ? (
-						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />
-					) : (
+					{location.pathname === "/about" && 
+						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />}
+					{location.pathname === "/" &&
 						<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
 							performanceMode={performanceMode}
 						/>
-					)}
+					}
+					{location.pathname === "/blog" &&
+						<Blog
+							key="Blog"
+							projectName={encodeURIComponent(projectName)}
+							delayAnimation={delayAnimation}
+							performanceMode={performanceMode}
+						/>
+					}
 				</AnimatePresence>
 			</section>
 			<footer className="xl:absolute bottom-0 right-1">
