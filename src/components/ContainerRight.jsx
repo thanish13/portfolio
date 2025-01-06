@@ -32,7 +32,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 				<AnimatePresence mode="wait">
 					{location.pathname === "/about" && 
 						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />}
-					{location.pathname === "/" &&
+					{
 						<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
