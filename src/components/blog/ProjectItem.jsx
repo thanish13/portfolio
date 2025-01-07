@@ -33,7 +33,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 				tiltMaxAngleX={!selected && !performanceMode && 8}
 				tiltMaxAngleY={!selected && !performanceMode && 6}
 				tiltReverse={selected}>
-				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
+				<Link to={!selected && `/blog/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
 					<div
 						className={cn(

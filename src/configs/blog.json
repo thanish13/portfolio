@@ -1,0 +1,214 @@
+[
+	{
+		"title": "Blog",
+		"description": "A secure Markdown editor built with React for quick notes and detailed documents. All files are encrypted locally before storing them securely in Firebase.",
+		"thumbnail": "/assets/projects/muistio/muistio-thumbnail.webp",
+		"images": [
+			"/assets/projects/muistio/muistio-1.webp",
+			"/assets/projects/muistio/muistio-2.webp",
+			"/assets/projects/muistio/muistio-3.webp",
+			"/assets/projects/muistio/muistio-4.webp"
+		],
+		"year": "2024",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/Muistio" },
+			{ "type": "live", "url": "https://muistio.Thanish.dev/" }
+		],
+		"tech": ["TypeScript", "React", "Tailwind CSS", "Framer Motion", "Firebase"]
+	},
+	{
+		"title": "DCWheel",
+		"description": "Fast and fun way to create teams for games and events! With a Discord integration, you can easily add players and share the results with your server.",
+		"thumbnail": "/assets/projects/dcwheel/dcwheel-thumbnail.webp",
+		"images": [
+			"/assets/projects/dcwheel/dcwheel-1.webp",
+			"/assets/projects/dcwheel/dcwheel-2.webp",
+			"/assets/projects/dcwheel/dcwheel-3.webp",
+			"/assets/projects/dcwheel/dcwheel-4.webp",
+			"/assets/projects/dcwheel/dcwheel-5.webp"
+		],
+		"year": "2024",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/DCWheel" },
+			{ "type": "live", "url": "https://dcwheel.Thanish.dev/" }
+		],
+		"tech": [
+			"React",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Express",
+			"Supabase",
+			"Node.js",
+			"Discord.js"
+		]
+	},
+	{
+		"title": "Thanish.dev",
+		"description": "My personal website, where you can find all my projects and more information about me. Built with a design-first approach, emphasizing smooth animations and transitions, all handcrafted using Framer Motion.",
+		"thumbnail": "/assets/projects/Thanishdev/Thanishdev-thumbnail.webp",
+		"images": [
+			"/assets/projects/Thanishdev/Thanishdev-1.webp",
+			"/assets/projects/Thanishdev/Thanishdev-2.webp",
+			"/assets/projects/Thanishdev/Thanishdev-3.webp",
+			"/assets/projects/Thanishdev/Thanishdev-4.webp"
+		],
+		"year": "2024",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/Thanish.dev" },
+			{ "type": "live", "url": "https://Thanish.dev/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Framer Motion"]
+	},
+	{
+		"title": "Sonic CDN",
+		"description": "An Electron application for easily uploading and managing files on a content delivery network.",
+		"thumbnail": "/assets/projects/sonic-cdn/sonic-cdn-thumbnail.webp",
+		"images": [
+			"/assets/projects/sonic-cdn/sonic-cdn-1.webp",
+			"/assets/projects/sonic-cdn/sonic-cdn-2.webp",
+			"/assets/projects/sonic-cdn/sonic-cdn-3.webp"
+		],
+		"year": "2024",
+		"links": [{ "type": "code", "url": "https://github.com/Thanish/Sonic-CDN" }],
+		"tech": ["TypeScript", "Electron", "Node.js", "Express", "Tailwind CSS"]
+	},
+	{
+		"title": "botBob",
+		"description": "An advanced Discord bot with fully customizable features, AI integration, and multilingual support. Originally started in 2019, rewritten in 2024.",
+		"thumbnail": "/assets/projects/botbob/botbob-thumbnail.webp",
+		"images": [
+			"/assets/projects/botbob/botbob-1.webp",
+			"/assets/projects/botbob/botbob-2.webp",
+			"/assets/projects/botbob/botbob-3.webp",
+			"/assets/projects/botbob/botbob-4.webp"
+		],
+		"year": "2024",
+		"links": [{ "type": "code", "url": "https://github.com/Thanish/botBob" }],
+		"tech": ["Node.js", "MongoDB", "OpenAI", "Discord.js"]
+	},
+	{
+		"title": "CS2Rankings",
+		"description": "Website with live Counter-Strike 2 leaderboard rankings, overall position tracking, detailed player histories and previous season standings.",
+		"thumbnail": "/assets/projects/cs2rankings/cs2rankings-thumbnail.webp",
+		"images": [
+			"/assets/projects/cs2rankings/cs2rankings-1.webp",
+			"/assets/projects/cs2rankings/cs2rankings-2.webp",
+			"/assets/projects/cs2rankings/cs2rankings-3.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/cs2rankings" },
+			{ "type": "live", "url": "https://cs2rankings.com/" }
+		],
+		"tech": ["React", "Tailwind CSS", "Redux", "MongoDB", "Express", "Node.js"]
+	},
+	{
+		"title": "Thunderblaze",
+		"description": "Website built for a private Discord server. This is a demo version, where you can access all the features by using the \"Demo menu\" button at the bottom of the page.",
+		"thumbnail": "/assets/projects/thunderblaze/thunderblaze-thumbnail.webp",
+		"images": [
+			"/assets/projects/thunderblaze/thunderblaze-1.webp",
+			"/assets/projects/thunderblaze/thunderblaze-2.webp",
+			"/assets/projects/thunderblaze/thunderblaze-3.webp",
+			"/assets/projects/thunderblaze/thunderblaze-4.webp",
+			"/assets/projects/thunderblaze/thunderblaze-5.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/Thunderblaze" },
+			{ "type": "demo", "url": "https://thunderblaze.Thanish.dev/" }
+		],
+		"tech": [
+			"React",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Redux",
+			"Supabase",
+			"MongoDB",
+			"Express",
+			"Node.js"
+		]
+	},
+	{
+		"title": "Who sent that?",
+		"description": "Discord chat guessing game, where you have to guess who sent the message. Includes a live leaderboard and Discord notifications.",
+		"thumbnail": "/assets/projects/whosentthat/WST-thumbnail.webp",
+		"images": [
+			"/assets/projects/whosentthat/WST-1.webp",
+			"/assets/projects/whosentthat/WST-2.webp",
+			"/assets/projects/whosentthat/WST-3.webp",
+			"/assets/projects/whosentthat/WST-4.webp"
+		],
+		"year": "2023",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/WhoSentThat" },
+			{ "type": "demo", "url": "https://whosentthat.Thanish.dev/" }
+		],
+		"tech": [
+			"React",
+			"Tailwind CSS",
+			"Framer Motion",
+			"Supabase",
+			"MongoDB",
+			"Express",
+			"Node.js",
+			"Discord.js"
+		]
+	},
+	{
+		"title": "CS2 Text Mod Merger",
+		"description": "Electron app made for merging Counter-Strike 2 text mod files with the game's original language files.",
+		"thumbnail": "/assets/projects/cs2textmodmerger/CS2TMM-thumbnail.webp",
+		"images": [
+			"/assets/projects/cs2textmodmerger/CS2TMM-1.webp",
+			"/assets/projects/cs2textmodmerger/CS2TMM-3.webp",
+			"/assets/projects/cs2textmodmerger/CS2TMM-4.webp"
+		],
+		"year": "2023",
+		"links": [{ "type": "code", "url": "https://github.com/Thanish/CS2TextModMerger" }],
+		"tech": ["Electron", "Node.js", "HTML", "CSS"]
+	},
+	{
+		"title": "Jumpy",
+		"description": "Challenging 2D platformer game that requires precision and patience. One miscalculated jump, and you'll be plummeting back to the start. Built with Unity for both desktop and mobile.",
+		"thumbnail": "/assets/projects/jumpy/jumpy-thumbnail.webp",
+		"images": [
+			"/assets/projects/jumpy/jumpy-1.webp",
+			"/assets/projects/jumpy/jumpy-2.webp",
+			"/assets/projects/jumpy/jumpy-3.webp",
+			"/assets/projects/jumpy/jumpy-4.webp"
+		],
+		"year": "2022",
+		"links": [
+			{ "type": "code", "url": "https://github.com/Thanish/jumpy" },
+			{ "type": "demo", "url": "https://Thanish.itch.io/jumpy" }
+		],
+		"tech": ["Unity", "C#"]
+	},
+	{
+		"title": "CSDevAlerts",
+		"description": "Discord bot that sends a notification whenever a developer starts playing CS:GO",
+		"thumbnail": "/assets/projects/csdevalerts/csdevalerts-thumbnail.webp",
+		"images": [
+			"/assets/projects/csdevalerts/csdevalerts-1.webp",
+			"/assets/projects/csdevalerts/csdevalerts-2.webp",
+			"/assets/projects/csdevalerts/csdevalerts-3.webp"
+		],
+		"year": "2022",
+		"links": [{ "type": "code", "url": "https://github.com/Thanish/CsDevAlerts" }],
+		"tech": ["Node.js", "Discord.js"]
+	},
+	{
+		"title": "Twitch Drops Manager",
+		"description": "Chrome extension that makes it easy to follow your Twitch drops progress. Drops are shown right under the stream, with a progress bar and time left in minutes.",
+		"thumbnail": "/assets/projects/twitchdropsmanager/TDM-thumbnail.webp",
+		"images": [
+			"/assets/projects/twitchdropsmanager/TDM-1.webp",
+			"/assets/projects/twitchdropsmanager/TDM-2.webp",
+			"/assets/projects/twitchdropsmanager/TDM-3.webp"
+		],
+		"year": "2021",
+		"links": [{ "type": "code", "url": "https://github.com/Thanish/TwitchDropsManager" }],
+		"tech": ["HTML", "CSS", "JavaScript"]
+	}
+]

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import projectsDb from "../../configs/projects.json";
+import projectsDb from "../../configs/blog.json";
 import ProjectItem from "./ProjectItem";
 import { createRef, useEffect, useRef } from "react";
 import useCheckMobile from "../../hooks/useCheckMobile";
@@ -115,7 +115,7 @@ const Blog = ({ projectName, delayAnimation, performanceMode }) => {
 				variants={list}
 				custom={delayAnimation ? [0.6, 0.5] : [0, 0]}
 				ref={listRef}
-				onAnimationComplete={() => scrollToProject(listRef, projectName, performanceMode)}
+				onAnimationComplete={() => scrollToProject(listRef, blogName, performanceMode)}
 				onScroll={(e) => scrollShadow(e.target, botShadow, topShadow)}
 				// Scrollbar track color is set to invisible, to be able to render the thumb color in Firefox
 				className={cn(
