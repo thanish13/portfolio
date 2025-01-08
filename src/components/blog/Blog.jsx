@@ -61,9 +61,9 @@ const scrollShadow = (element, botShadow, topShadow) => {
 };
 
 // Scroll to the selected project
-const scrollToProject = (listRef, projectRefs, projectName, performanceMode) => {
+const scrollToProject = (listRef, projectRefs, blogName, performanceMode) => {
 	const projectIndex = projectsDb.findIndex(
-		(project) => encodeURIComponent(project.title) === projectName
+		(project) => encodeURIComponent(project.title) === blogName
 	);
 
 	if (projectIndex !== -1) {
@@ -76,7 +76,7 @@ const scrollToProject = (listRef, projectRefs, projectName, performanceMode) => 
 	}
 };
 
-const Blog = ({ projectName, delayAnimation, performanceMode }) => {
+const Blog = ({ blogName, delayAnimation, performanceMode }) => {
 	const isMobile = useCheckMobile();
 
 	// Refs
@@ -87,18 +87,18 @@ const Blog = ({ projectName, delayAnimation, performanceMode }) => {
 
 	// Scroll to a project when the url changes
 	useEffect(() => {
-		if (projectName && listRef?.current)
-			scrollToProject(listRef, projectRefs, projectName, performanceMode);
+		if (blogName && listRef?.current)
+			scrollToProject(listRef, projectRefs, blogName, performanceMode);
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [projectName]);
+	}, [blogName]);
 
 	return (
 		<>
 			<Helmet>
 				<title>
-					Thanish - {projectName !== "undefined" ? decodeURIComponent(projectName) : "Web Developer"}
+					Thanish - {blogName !== "undefined" ? decodeURIComponent(blogName) : "Web Developer"}
 				</title>
-				{projectName !== "undefined" && <meta name="robots" content="noindex" />}
+				{blogName !== "undefined" && <meta name="robots" content="noindex" />}
 			</Helmet>
 			{/* Top shadow */}
 			<div
@@ -127,7 +127,7 @@ const Blog = ({ projectName, delayAnimation, performanceMode }) => {
 						key={project.title}
 						ref={projectRefs.current[i]}
 						item={project}
-						current={projectName}
+						current={blogName}
 						parsedUrl={encodeURIComponent(project.title)}
 						index={i}
 						lastItem={projectsDb.length === i + 1}

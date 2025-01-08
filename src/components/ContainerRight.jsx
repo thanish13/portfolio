@@ -31,17 +31,18 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} blogName={encodeURIComponent(blogName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
-					{location.pathname === "/about" && 
-						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />}
-					{
+				{location.pathname === "/" ? (
+						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />
+					) : location.pathname === "/project"? (
+
 						<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
 							performanceMode={performanceMode}
 						/>
-					}
-					{location.pathname === "/blog" &&
+					):  
+					
 						<Blog
 							key="Blog"
 							projectName={encodeURIComponent(blogName)}
