@@ -9,7 +9,7 @@ import Blog from "./components/blog/Blog";
 
 const router = createBrowserRouter([
 	{
-		path: "/",
+		path: "*",
 		element: <Home />,
 		children: [
 			{
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
 				element: <Projects />,
 			},
 			{
-				path: "/",
+				path: "/about",
 				element: <About />,
 			},
 			{
