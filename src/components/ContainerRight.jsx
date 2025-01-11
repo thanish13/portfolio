@@ -30,7 +30,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} blogName={encodeURIComponent(blogName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
-				<AnimatePresence mode="wait" initial={false} custom={direction}>
+				<AnimatePresence mode="wait">
 				{location.pathname === "/about" &&
 						(<About 
 							key="About" 
@@ -38,7 +38,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 							performanceMode={performanceMode} 
 						/>)
 				}
-				{location.pathname === "/project" &&
+				{location.pathname === "/" &&
 						(<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}

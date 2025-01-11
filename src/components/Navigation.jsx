@@ -24,7 +24,7 @@ const Navigation = ({ location, projectName, blogName }) => {
 										 "backdrop-blur-none bg-gradient-to-br from-[#131313] to-[#171717]"
 									)}>
 				{/* className= "w-full flex gap-10 items-center pt-2 tablet:pt-0 justify-center"> */}
-				<NavItem name="About Me" url="/" current={location} />
+				<NavItem name="About Me" url="/about" current={location} />
 				<NavItem
 					name="Projects"
 					url="/project"
