@@ -5,7 +5,6 @@ import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
-import Blog from "./blog/Blog";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -13,7 +12,6 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 	const { scrollDir, scrollPos } = useScrollDirection(mainRef?.current);
 	const location = useLocation();
 	const { projectName } = useParams();
-	const {blogName} = useParams();
 
 	// Scroll to bottom when the user scrolls down after a certain point
 	if (scrollDir === "down" && scrollPos > 250 && !hasScrolled) {
@@ -28,7 +26,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 
 	return (
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
-			<Navigation location={location} projectName={encodeURIComponent(projectName)} blogName={encodeURIComponent(blogName)} />
+			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
 			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
 				{location.pathname === "/about" &&
@@ -42,14 +40,6 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 						(<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
-							delayAnimation={delayAnimation}
-							performanceMode={performanceMode}
-						/>)
-				}
-				{location.pathname === "/blog" &&
-						(<Blog
-							key="Blog"
-							projectName={encodeURIComponent(blogName)}
 							delayAnimation={delayAnimation}
 							performanceMode={performanceMode}
 						/>)

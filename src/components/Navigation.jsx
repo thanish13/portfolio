@@ -12,7 +12,7 @@ const list = {
 	hidden: {},
 };
 
-const Navigation = ({ location, projectName, blogName }) => {
+const Navigation = ({ location, projectName }) => {
 	return (
 		<nav className="w-full">
 			<motion.ul
@@ -31,7 +31,6 @@ const Navigation = ({ location, projectName, blogName }) => {
 					current={location}
 					projectName={projectName === "undefined" ? null : projectName}
 				/>
-				<NavItem name="Blog" url="/blog" current={location} projectName={blogName === "undefined" ? null : blogName} />
 			</motion.ul>			
 		</nav>
 	);
