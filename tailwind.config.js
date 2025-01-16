@@ -17,7 +17,7 @@ export default {
 				primary: "#191919",
 				secondary: "#2A2A2A",
 				tertiary: "#8B8B8B",
-				accent: "#D2A754",
+				accent: "#10456B",
 			},
 			dropShadow: {
 				icon: "0 1px 1px rgba(0, 0, 0, 1)",
