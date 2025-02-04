@@ -50,12 +50,12 @@ const textContact = {
 };
 
 
-const targetRef = useRef(null);
-const { scrollYProgress } = useScroll({
-  target: targetRef,
-});
+// const targetRef = useRef(null);
+// const { scrollYProgress } = useScroll({
+//   target: targetRef,
+// });
 
-const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+// const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
 
 const About = ({ delayAnimation, performanceMode }) => {
@@ -109,17 +109,17 @@ const About = ({ delayAnimation, performanceMode }) => {
 								"Besides programming, I enjoy playing video games, editing photos and videos, and tinkering with small electronic projects in my free time."
 							}
 						</motion.p>
-						<motion.div>
+						{/* <motion.div>
 							<motion.h1 className="text-white/50 mb-2">Experience</motion.h1>
-							<section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+							<section className="relative h-[300vh] bg-neutral-900">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden bg-slate-800 py-6">
-        <motion.div style={{ x }}> 
+        <motion.div> 
           <Exp/>
         </motion.div>
       </div>
     </section>
 
-						</motion.div>
+						</motion.div> */}
 						<TechStack variants={text} />
 						<motion.p className="mt-2 tablet:mt-2 text-center" variants={textContact}>
 							{"Feel free to "}
