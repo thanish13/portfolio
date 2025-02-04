@@ -1,5 +1,5 @@
-import { useEffect, useState, useRef, useScroll, useTransform} from "react";
-import { cubicBezier, motion } from "framer-motion";
+import { useEffect, useState, useRef} from "react";
+import { cubicBezier, motion, useTransform, useScroll } from "framer-motion";
 import Title from "./Title";
 // import Contact from "./Contact";
 import { cn } from "../../../lib/utils";
