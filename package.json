@@ -17,10 +17,12 @@
 		"react-dom": "^18.2.0",
 		"react-helmet": "^6.1.0",
 		"react-icons": "^4.12.0",
+		"react-intersection-observer": "^9.15.1",
 		"react-parallax-tilt": "^1.7.179",
 		"react-router-dom": "^6.21.1",
 		"tailwind-merge": "^2.2.0",
-		"tailwind-scrollbar": "^3.0.5"
+		"tailwind-scrollbar": "^3.0.5",
+		"throttle-debounce-ts": "^1.1.1"
 	},
 	"devDependencies": {
 		"@types/react": "^18.2.43",

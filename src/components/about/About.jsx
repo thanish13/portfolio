@@ -5,6 +5,8 @@ import Title from "./Title";
 import { cn } from "../../../lib/utils";
 import TechStack from "./TechStack";
 import { Helmet } from "react-helmet";
+import AppI from "./rotate";
+
 
 // Animation variants
 const container = {
@@ -100,6 +102,7 @@ const About = ({ delayAnimation, performanceMode }) => {
 								"Besides programming, I enjoy playing video games, editing photos and videos, and tinkering with small electronic projects in my free time."
 							}
 						</motion.p>
+						<AppI/>
 						<TechStack variants={text} />
 						<motion.p className="mt-2 tablet:mt-2 text-center" variants={textContact}>
 							{"Feel free to "}
