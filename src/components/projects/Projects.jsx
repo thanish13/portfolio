@@ -94,6 +94,7 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 
 	return (
 		<>
+		<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 			<Helmet>
 				<title>
 					Thanish - {projectName !== "undefined" ? decodeURIComponent(projectName) : "Web Developer"}
@@ -143,6 +144,7 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 				style={{ opacity: 0.6 }}
 				className="relative bottom-4 bg-gradient-to-t from-background to-transparent right-4 h-4 w-full z-10 duration-500 pointer-events-none"
 			/>
+		</section>
 		</>
 	);
 };

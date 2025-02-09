@@ -5,6 +5,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
+import Experience from "./experience/Experience";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -27,10 +28,10 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 	return (
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
-			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
 				{location.pathname === "/about" &&
-						(<About 
+						(
+						<About 
 							key="About" 
 							delayAnimation={delayAnimation} 
 							performanceMode={performanceMode} 
@@ -43,9 +44,14 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 							delayAnimation={delayAnimation}
 							performanceMode={performanceMode}
 						/>)
+				}{location.pathname === "/experience" &&
+					(<Experience 
+						key="About" 
+						delayAnimation={delayAnimation} 
+						performanceMode={performanceMode} 
+					/>)
 				}
 				</AnimatePresence>
-			</section>
 			<footer className="xl:absolute bottom-0 right-1">
 				<a
 					href="https://github.com/Thanish"

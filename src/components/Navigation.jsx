@@ -31,6 +31,8 @@ const Navigation = ({ location, projectName }) => {
 					current={location}
 					projectName={projectName === "undefined" ? null : projectName}
 				/>
+				<NavItem name="Experience" url="/experience" current={location} />
+
 			</motion.ul>			
 		</nav>
 	);

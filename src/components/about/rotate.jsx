@@ -1,101 +1,87 @@
-import {
-    motion,
-    MotionProps,
-    useTransform,
-    useViewportScroll,
-  } from "framer-motion";
-  import { throttle } from "throttle-debounce-ts";
-  //import "normalize.css";
-  import { useEffect, useRef, useState } from "react";
-  //import "./styles.css";
-  
-  // * based on: https://gist.github.com/coleturner/34396fb826c12fbd88d6591173d178c2
-  function useElementViewportPosition(ref) {
-    const [position, setPosition] = useState([0, 0]);
-  
-    useEffect(() => {
-      if (!ref || !ref.current) return;
-  
-      const pageHeight = document.body.scrollHeight;
-      const start = ref.current.offsetTop;
-      const end = start + ref.current.offsetHeight;
-  
-      setPosition([start / pageHeight, end / pageHeight]);
-    }, []);
-  
-    return { position };
+import React, { useRef } from "react";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+function AppE() {
+
+  function useParallax(value, distance) {
+    return useTransform(value, [0,1], [-distance, distance]);
   }
-  
-  const slideAnimation = {
-    variants: {
-      full: { backgroundColor: "#663399" },
-      partial: { backgroundColor: "#808080" },
-    },
-    initial: "partial",
-    whileInView: "full",
-    viewport: { amount: 1, once: true },
-  };
-  
-  export default function AppI() {
-    const ref = useRef(null);
-    const carouselRef = useRef(null);
-    const { position } = useElementViewportPosition(ref);
-    const [carouselEndPosition, setCarouselEndPosition] = useState(0);
-    const { scrollYProgress, scrollY } = useViewportScroll();
-    const x = useTransform(scrollYProgress, position, [0, carouselEndPosition]);
-  
-    useEffect(() => {
-      window.addEventListener("scroll", () =>
-        console.log({ scrollYProgress: scrollYProgress.current, scrollY })
-      );
-    }, []);
-  
-    useEffect(() => {
-      if (!carouselRef || !carouselRef.current) return;
-      const parent = carouselRef.current.parentElement;
-      const scrollbarWidth =
-        window.innerWidth - document.documentElement.clientWidth;
-  
-      const resetCarouselEndPosition = () => {
-        if (carouselRef && carouselRef.current) {
-          const newPosition =
-            carouselRef.current.clientWidth -
-            window.innerWidth +
-            scrollbarWidth +
-            parent.offsetLeft * 2;
-  
-          setCarouselEndPosition(-newPosition);
-        }
-      };
-  
-      resetCarouselEndPosition();
-      const handleResize = throttle(10, resetCarouselEndPosition);
-  
-      window.addEventListener("resize", handleResize);
-      return () => window.removeEventListener("resize", handleResize);
-    }, []);
-  
-    return (
-      <div>
-        <section ref={ref}>
-          <div className="container" style={{ height: "300vh" }}>
-            <div className="sticky-wrapper">
-              <motion.div ref={carouselRef} className="carousel" style={{ x }}>
-                {Array.from(Array(8).keys()).map((i) => (
-                  <motion.div
-                    {...slideAnimation}
-                    key={i}
-                    className="carousel__slide"
-                  >
-                    {i + 1}
-                  </motion.div>
-                ))}
+
+  function useParallaxRev(value, distance) {
+    return useTransform(value, [0,1], [distance, -distance]);
+  }
+
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+      stiffness: 100,
+      damping: 30,
+      restDelta: 0.001
+  });
+
+  const Page = ({ title, description, svgIcon }) => {
+          const ref = useRef(null);
+          const {scrollYProgress} = useScroll({target: ref});
+          const z = useParallax(scrollYProgress, 400);
+
+          const y = useParallax(scrollYProgress, 800);
+          const x = useParallaxRev(scrollYProgress, 1200)
+
+          return (
+          <>
+            <section className="h-screen grid grid-cols-3 grid-rows-3 gap-8 items-center m-auto relative">
+              <div ref={ref} className="text-3xl font-bold row-start-2 col-start-2">
+                  {title}
+              </div>
+
+              <div className="row-start-2 col-start-2 self-end text-lg font-bold">
+                  {description}
+              </div>
+              <motion.div style={{y: y}} className="row-start-1 col-start-2">
+                {svgIcon}
               </motion.div>
-            </div>
-          </div>
-        </section>
-    
-      </div>
-    );
-  }
-  
+              <motion.div style={{y: x}} className="row-start-1 col-start-3">
+                {svgIcon}
+              </motion.div>
+
+              <motion.div style={{y: z}} className="row-start-1 col-start-1 col-span-3 row-span-3 background min-h-screen min-w-screen -z-20">
+
+              </motion.div>
+              
+            </section>
+              
+          </>
+          )
+        }
+
+
+  return (
+    <div className="App">
+      <Page title={"Section 1"} 
+            description={"This is section one"} 
+            svgIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>}
+        />
+        <Page title={"Section 2"} 
+            description={"This is section two"} 
+            svgIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>}
+        />
+        <Page title={"Section 4"} 
+            description={"This is section two"} 
+            svgIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                    </svg>}
+        /><Page title={"Section 3"} 
+        description={"This is section two"} 
+        svgIcon={<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>}
+    />
+        <motion.div style={{scaleX}} className="fixed left-0 right-0 bottom-12 h-4 bg-black">
+        </motion.div>
+    </div>
+  );
+}
+
+export default AppE;
