@@ -1,6 +1,6 @@
 export default function Component() {
     return (
-      <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto py-0 px-4 sm:px-6 lg:px-8">
         <div className="relative overflow-hidden">
           <div className="space-y-8">
             <div className="relative">
