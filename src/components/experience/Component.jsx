@@ -4,8 +4,10 @@ export default function Component() {
   
     return (
       <motion.div 
-        initial={{ y:-60}}
-        animate={{ y:0 , scale: 1 }}
+        initial={{ y:100}}
+        animate={{ y:0 , transition:{duration: 2}}}
+        delay = '0.5'
+        duration = '0.4'
         className="container mx-auto py-0 px-4 sm:px-6 lg:px-8">
         <motion.div className="relative overflow-hidden">
           <motion.div className="space-y-8">
