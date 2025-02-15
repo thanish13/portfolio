@@ -102,7 +102,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 					{/* Hoverable logo */}
 					<Tilt
 						className="bg-[url('/assets/LogoBG.png')] bg-cover bg-center bg-no-repeat flex justify-center items-center aspect-square rounded-[2rem] transform-style-3d"
-						perspective={800}
+						perspective={600}
 						glareEnable={true}
 						glareMaxOpacity={isMobile ? 0.1 : 0.2}
 						glareColor="#FFC166"
@@ -114,7 +114,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 						gyroscope={!performanceMode}>
 						{/* Inner logo letter */}
 						<img
-							className="w-1/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
+							className="w-3/4 transform-style-3d translate-z-4 drop-shadow-2xl group-hover:scale-125 duration-500 ease-out select-none"
 							src="assets/LogoLetter.png"
 							alt="W letter logo"
 							draggable="false"
