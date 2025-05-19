@@ -1,11 +1,11 @@
 import { useLocation, useParams } from "react-router-dom";
 import Navigation from "./Navigation";
 import Projects from "./projects/Projects";
+import Experience from "./experience/Experience";
 import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
-import Experience from "./experience/Experience";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -28,37 +28,32 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 	return (
 		<div className="h-full w-full tablet:w-[800px] flex flex-col items-center justify-start tablet:justify-center gap-4">
 			<Navigation location={location} projectName={encodeURIComponent(projectName)} />
+			<section className="relative w-full h-full tablet:h-[40rem] pb-1 xl:pb-0 z-0 overflow-hidden">
 				<AnimatePresence mode="wait">
-				{location.pathname === "/about" &&
-						(
-						<About 
-							key="About" 
+					{ location.pathname === "/about" ? 
+						<About key="About" delayAnimation={delayAnimation} performanceMode={performanceMode} />
+					 : location.pathname === "/experience" ?
+						<Experience 
+							key="Experience" 
 							delayAnimation={delayAnimation} 
 							performanceMode={performanceMode} 
-						/>)
-				}
-				{location.pathname === "/" &&
-						(<Projects
+						/> :
+						<Projects
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
 							performanceMode={performanceMode}
-						/>)
-				}{location.pathname === "/experience" &&
-					(<Experience 
-						key="About" 
-						delayAnimation={delayAnimation} 
-						performanceMode={performanceMode} 
-					/>)
-				}
+						/>
+					}
 				</AnimatePresence>
+			</section>
 			<footer className="xl:absolute bottom-0 right-1">
 				<a
-					href="https://github.com/Thanish"
+					href="https://github.com/Wilzzu"
 					target="_blank"
 					rel="noreferrer noopener"
 					className="text-[#FBFBFB]/30 tablet:text-[#FBFBFB]/20 hover:text-[#FBFBFB] hover:drop-shadow-icon animate-fadeIn font-light text-xs duration-300 hover:underline">
-					© 2024 Thanish. All rights reserved.
+					© 2024 Wilzzu. All rights reserved.
 				</a>
 			</footer>
 		</div>
