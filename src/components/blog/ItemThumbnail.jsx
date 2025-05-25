@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import TechIcons from "./TechIcons";
 import { cn } from "../../../lib/utils";
+import { Link } from "react-router-dom";
 
 // Animation variants
 const container = {
@@ -24,7 +25,7 @@ const itemVariant = {
 	exit: { opacity: 0, transition: { duration: 0 } },
 };
 
-const ItemThumbnail = ({ item, performanceMode }) => {
+const ItemThumbnail = ({ item, performanceMode, parsedUrl }) => {
 	const calculateTitleScale = (title) => {
 		if (title.length <= 4) return "tablet:group-hover:scale-[3.2]";
 		if (title.length <= 7) return "tablet:group-hover:scale-[2.6]";
@@ -43,6 +44,7 @@ const ItemThumbnail = ({ item, performanceMode }) => {
 			custom={performanceMode}
 			className="absolute w-full flex flex-col justify-center items-center p-5 z-10">
 			{/* Title */}
+			<Link to={`/project/${parsedUrl}`} draggable={false}>
 			<motion.h1
 				variants={itemVariant}
 				className={cn(
@@ -55,6 +57,7 @@ const ItemThumbnail = ({ item, performanceMode }) => {
 				)}>
 				{item.title}
 			</motion.h1>
+			</Link>
 			{/* Year and Tech icons */}
 			<motion.div
 				variants={{ ...container, visible: { transition: { staggerChildren: 0.1 } } }}

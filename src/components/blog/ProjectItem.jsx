@@ -33,7 +33,6 @@ const ProjectItem = forwardRef(function ProjectItem(
 				tiltMaxAngleX={!selected && !performanceMode && 8}
 				tiltMaxAngleY={!selected && !performanceMode && 6}
 				tiltReverse={selected}>
-				<Link to={!selected && `/project/${parsedUrl}`} draggable={false}>
 					{/* Card container */}
 					<div
 						className={cn(
@@ -55,6 +54,7 @@ const ProjectItem = forwardRef(function ProjectItem(
 									key={item.title + "-thumbnail"}
 									item={item}
 									performanceMode={performanceMode}
+									parsedUrl={parsedUrl}
 								/>
 							)}
 						</AnimatePresence>
@@ -75,7 +75,6 @@ const ProjectItem = forwardRef(function ProjectItem(
 							)}
 						/>
 					</div>
-				</Link>
 			</Tilt>
 		</motion.li>
 	);
