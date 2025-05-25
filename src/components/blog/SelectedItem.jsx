@@ -38,6 +38,14 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 					"w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow",
 					performanceMode && "drop-shadow-none"
 				)}>
+				<motion.div
+				variants={itemVariant}
+				custom={performanceMode}
+				style={{ position: "absolute",
+						 top: 0,
+						 right: 0,}}>
+					<CloseButton/>
+				</motion.div>
 				{/* Title and Badges */}
 				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1">
 					{/* Name and Year */}
@@ -84,12 +92,6 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 					{item?.links.map((link) => (
 						<LinkButton key={`${item.title}-${link.type}`} link={link} />
 					))}
-				</motion.div>
-				<motion.div
-					variants={itemVariant}
-					custom={performanceMode}
-					className="w-full flex justify-center items-center gap-4 tablet:gap-5">
-						<CloseButton/>
 				</motion.div>
 			</motion.div>
 		</>
