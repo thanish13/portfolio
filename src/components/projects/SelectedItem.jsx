@@ -22,7 +22,7 @@ const itemVariant = {
 	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
 };
 
-const SelectedItem = ({ item, isMobile, performanceMode }) => {
+const SelectedItemProject = ({ item, isMobile, performanceMode }) => {
 	return (
 		<>
 			{/* Image carousel */}
@@ -91,4 +91,4 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 	);
 };
 
-export default SelectedItem;
+export default SelectedItemProject;

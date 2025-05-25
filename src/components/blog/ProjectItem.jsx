@@ -2,12 +2,14 @@ import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 import Tilt from "react-parallax-tilt";
-import SelectedItem from "./SelectedItem";
+import SelectedItemBlog from "./SelectedItem";
+import SelectedItemProject from "../projects/SelectedItem";
 import ItemThumbnail from "./ItemThumbnail";
 import { forwardRef, memo, useMemo } from "react";
 
 // Memoize SelectedItem and ItemThumbnail
-const MemoizedSelectedItem = memo(SelectedItem);
+const MemoizedSelectedItemBlog = memo(SelectedItemBlog);
+const MemoizedSelectedItemProject = memo(SelectedItemProject);
 const MemoizedItemThumbnail = memo(ItemThumbnail);
 
 const ProjectItem = forwardRef(function ProjectItem(
@@ -43,7 +45,13 @@ const ProjectItem = forwardRef(function ProjectItem(
 						{/* Content */}
 						<AnimatePresence>
 							{selected ? (
-								<MemoizedSelectedItem
+								item.type == "blog" ?
+								<MemoizedSelectedItemBlog
+									key={item.title + "-selected"}
+									item={item}
+									isMobile={isMobile}
+									performanceMode={performanceMode}
+								/> : <MemoizedSelectedItemProject
 									key={item.title + "-selected"}
 									item={item}
 									isMobile={isMobile}

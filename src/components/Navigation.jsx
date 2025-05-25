@@ -26,7 +26,7 @@ const Navigation = ({ location, projectName }) => {
 				{/* className= "w-full flex gap-10 items-center pt-2 tablet:pt-0 justify-center"> */}
 				<NavItem name="About Me" url="/about" current={location} />
 				<NavItem
-					name="Projects"
+					name="Home"
 					url="/"
 					current={location}
 					projectName={projectName === "undefined" ? null : projectName}

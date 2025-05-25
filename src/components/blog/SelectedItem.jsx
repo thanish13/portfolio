@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 import TechIcons from "./TechIcons";
-import ImageCarousel from "./carousel/ImageCarousel";
 import { cn } from "../../../lib/utils";
 import Experience from "../experience/Experience";
 import CloseButton from "./CloseButton";
@@ -24,7 +23,7 @@ const itemVariant = {
 	exit: { y: 0, opacity: 0, transition: { duration: 0 } },
 };
 
-const SelectedItem = ({ item, isMobile, performanceMode }) => {
+const SelectedItemBlog = ({ item, isMobile, performanceMode }) => {
 	return (
 		<>
 			{/* Content container */}
@@ -98,4 +97,4 @@ const SelectedItem = ({ item, isMobile, performanceMode }) => {
 	);
 };
 
-export default SelectedItem;
+export default SelectedItemBlog;
