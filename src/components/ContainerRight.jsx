@@ -6,6 +6,7 @@ import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
+import Blog from "./blog/Blog";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -38,7 +39,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 							delayAnimation={delayAnimation} 
 							performanceMode={performanceMode} 
 						/> :
-						<Projects
+						<Blog
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
