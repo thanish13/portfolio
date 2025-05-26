@@ -1,9 +1,8 @@
-import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "../../../lib/utils";
 import Tilt from "react-parallax-tilt";
-import SelectedItemBlog from "./SelectedItem";
-import SelectedItemProject from "../projects/SelectedItem";
+import SelectedItemBlog from "./SelectedItemBlog";
+import SelectedItemProject from "./SelectedItemProject";
 import ItemThumbnail from "./ItemThumbnail";
 import { forwardRef, memo, useMemo } from "react";
 
@@ -12,7 +11,7 @@ const MemoizedSelectedItemBlog = memo(SelectedItemBlog);
 const MemoizedSelectedItemProject = memo(SelectedItemProject);
 const MemoizedItemThumbnail = memo(ItemThumbnail);
 
-const ProjectItem = forwardRef(function ProjectItem(
+const HomeItem = forwardRef(function HomeItem(
 	{ item, current, parsedUrl, index, lastItem, variant, isMobile, performanceMode },
 	ref
 ) {
@@ -88,5 +87,5 @@ const ProjectItem = forwardRef(function ProjectItem(
 	);
 });
 
-const MemoizedProjectItem = memo(ProjectItem);
-export default MemoizedProjectItem;
+const MemoizedHomeItem = memo(HomeItem);
+export default MemoizedHomeItem;

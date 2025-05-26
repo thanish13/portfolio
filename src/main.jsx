@@ -3,9 +3,9 @@ import "./index.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
-import Projects from "./components/projects/Projects";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
+import HomePage from "./components/home/HomePage";
 
 const router = createBrowserRouter([
 	{
@@ -13,8 +13,8 @@ const router = createBrowserRouter([
 		element: <Home />,
 		children: [
 			{
-				path: "project/:projectName",
-				element: <Projects />,
+				path: "home/:projectName",
+				element: <HomePage />,
 			},
 			{
 				path: "about",

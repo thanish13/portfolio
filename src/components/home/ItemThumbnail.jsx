@@ -44,7 +44,7 @@ const ItemThumbnail = ({ item, performanceMode, parsedUrl }) => {
 			custom={performanceMode}
 			className="absolute w-full flex flex-col justify-center items-center p-5 z-10">
 			{/* Title */}
-			<Link to={`/project/${parsedUrl}`} draggable={false}>
+			<Link to={`/home/${parsedUrl}`} draggable={false}>
 			<motion.h1
 				variants={itemVariant}
 				className={cn(

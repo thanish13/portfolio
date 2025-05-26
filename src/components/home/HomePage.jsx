@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
 import projectsDb from "../../configs/projects.json";
-import ProjectItem from "./ProjectItem";
+import ProjectItem from "./HomeItem";
 import { createRef, useEffect, useRef } from "react";
 import useCheckMobile from "../../hooks/useCheckMobile";
 import { cn } from "../../../lib/utils";
 import { Helmet } from "react-helmet";
+import MemoizedHomeItem from "./HomeItem";
 
 // Animation variants
 const list = {
@@ -76,7 +77,7 @@ const scrollToProject = (listRef, projectRefs, projectName, performanceMode) => 
 	}
 };
 
-const Projects = ({ projectName, delayAnimation, performanceMode }) => {
+const HomePage = ({ projectName, delayAnimation, performanceMode }) => {
 	const isMobile = useCheckMobile();
 
 	// Refs
@@ -124,7 +125,7 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 					performanceMode && "backdrop-blur-none"
 				)}>
 				{projectsDb.map((project, i) => (
-					<ProjectItem
+					<MemoizedHomeItem
 						key={project.title}
 						ref={projectRefs.current[i]}
 						item={project}
@@ -149,4 +150,4 @@ const Projects = ({ projectName, delayAnimation, performanceMode }) => {
 	);
 };
 
-export default Projects;
+export default HomePage;

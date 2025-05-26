@@ -1,12 +1,11 @@
 import { useLocation, useParams } from "react-router-dom";
 import Navigation from "./Navigation";
-import Projects from "./projects/Projects";
 import Experience from "./experience/Experience";
 import { AnimatePresence } from "framer-motion";
 import About from "./about/About";
 import { useEffect, useState } from "react";
 import useScrollDirection from "../hooks/useScrollDirection";
-import Blog from "./blog/Blog";
+import HomePage from "./home/HomePage";
 
 const ContainerRight = ({ mainRef, performanceMode }) => {
 	const [delayAnimation, setDelayAnimation] = useState(true);
@@ -39,7 +38,7 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 							delayAnimation={delayAnimation} 
 							performanceMode={performanceMode} 
 						/> :
-						<Blog
+						<HomePage
 							key="Projects"
 							projectName={encodeURIComponent(projectName)}
 							delayAnimation={delayAnimation}
