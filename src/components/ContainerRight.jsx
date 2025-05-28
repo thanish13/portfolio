@@ -49,11 +49,11 @@ const ContainerRight = ({ mainRef, performanceMode }) => {
 			</section>
 			<footer className="xl:absolute bottom-0 right-1">
 				<a
-					href="https://github.com/Wilzzu"
+					href="https://github.com/Thanish"
 					target="_blank"
 					rel="noreferrer noopener"
 					className="text-[#FBFBFB]/30 tablet:text-[#FBFBFB]/20 hover:text-[#FBFBFB] hover:drop-shadow-icon animate-fadeIn font-light text-xs duration-300 hover:underline">
-					© 2024 Wilzzu. All rights reserved.
+					© 2024 Thanish. All rights reserved.
 				</a>
 			</footer>
 		</div>
