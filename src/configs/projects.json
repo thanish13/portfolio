@@ -2,6 +2,7 @@
 	{	"type" : "blog",
 		"title": "Muistio",
 		"description": "A secure Markdown editor built with React for quick notes and detailed documents. All files are encrypted locally before storing them securely in Firebase.",
+		"content" : "/assets/index.md",
 		"thumbnail": "/assets/projects/muistio/muistio-thumbnail.webp",
 		"images": [
 			"/assets/projects/muistio/muistio-1.webp",
