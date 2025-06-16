@@ -6,6 +6,7 @@ import Experience from "../experience/Experience";
 import CloseButton from "./CloseButton";
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import BlogContent from "./blog/BlogContent";
 // Animation variants
 const containerVariant = {
 	visible: { transition: { delayChildren: 0.2, staggerChildren: 0.12 } },
@@ -76,28 +77,8 @@ const SelectedItemBlog = ({ item, isMobile, performanceMode }) => {
 					</motion.div>
 				</div>
 				{/* Description */}
-				<motion.p
-					className="px-1 tablet:px-4 text-center text-sm tablet:text-[0.92rem] tablet:leading-normal"
-					variants={itemVariant}
-					custom={performanceMode}>
-				{
-					function () {
-					const [markdown, setMarkdown] = useState("");
-
-					useEffect(() => {
-						fetch()
-						.then((res) => res.text())
-						.then((text) => setMarkdown(text));
-					}, []);
-
-					return (
-						<>
-						<ReactMarkdown source={markdown} />
-						</>
-						);
-					}
-				}
-				</motion.p>
+				
+				<BlogContent/>
 
 				{/* Links */}
 				<motion.div
