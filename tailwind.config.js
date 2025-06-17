@@ -80,7 +80,8 @@ export default {
 		},
 	},
 	plugins: [
+		require('@tailwindcss/typography'),
 		tailwindcss3d,
-		tailwindScrollbar({ nocompatible: true, preferredStrategy: "pseudoelements" }),
+		tailwindScrollbar({ nocompatible: true, preferredStrategy: "pseudoelements" })
 	],
 };

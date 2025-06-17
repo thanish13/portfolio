@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer utilities {
 	.bg-clip {
 		-webkit-mask-image: url("/assets/overlay.svg"), linear-gradient(#052952 0 0);
@@ -27,3 +28,4 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+

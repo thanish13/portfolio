@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import MarkDown from 'react-markdown';
+import ReactMarkDown from 'react-markdown';
 
 function BlogContent() {
 	const [post, setPost] = useState('');
@@ -15,10 +15,10 @@ function BlogContent() {
 	});
 
 	return (
-		<div>
-			<MarkDown>
+		<div class="prose prose-slate dark:prose-invert">
+			<ReactMarkDown>
                 {post}
-			</MarkDown>
+			</ReactMarkDown>
 		</div>
 	);
 }
