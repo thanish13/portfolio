@@ -9,7 +9,7 @@ I wrote a bit of JSX in my editor:
 
 Right now, this information only exists on *my* device. But with a bit of luck, it will travel through time and space to *your* device, and appear on *your* screen.
 
-```JAVA
+```js eval
 System.out.println("Happy");
 ```
 
