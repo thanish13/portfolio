@@ -28,7 +28,7 @@ const Contact = () => {
 		<motion.div variants={container} className="flex flex-col-reverse">
 			<motion.p variants={item} className="text-xs tablet:text-sm text-neutral-400 text-center">
 				{"Contact me via email."} <br />{" "}
-				<span className="text-xs">{"(Email: thanishmalai13@gmail.com)"}</span>
+				<span className="text-xs">{"(Email: thanishmalaip@gmail.com)"}</span>
 			</motion.p>
 			<motion.div variants={item}>
 				<IconLinks icons={icons.contact} direction={20} style={"justify-center gap-8 scale-90"} />
