@@ -107,7 +107,7 @@ const About = ({ delayAnimation, performanceMode }) => {
 							<a
 								target="_blank"
 								rel="noopener noreferrer"
-								href="mailto:Thanishdev@gmail.com"
+								href="mailto:thanishmalaip@gmail.com"
 								className="underline underline-offset-2 ">
 								contact me
 							</a>
