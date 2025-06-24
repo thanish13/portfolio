@@ -88,17 +88,17 @@ const About = ({ delayAnimation, performanceMode }) => {
 						{/* Content */}
 						<motion.p variants={text}>
 							{
-								"I'm a 24 year old developer from India, who enjoys creating fun projects around my passions. With a background in graphic design, I focus on the design and try to make everything look as good as possible."
+								"I'm a backend developer with 2 years of experience specializing in Java-based microservices, with a strong focus on performance, security, and scalable architecture using tools like Spring Boot, Hibernate, and Kafka."
 							}
 						</motion.p>
 						<motion.p variants={text}>
 							{
-								'I\'m a "Do-It-Yourself" type of person, so instead of using pre-made designs or templates, I like to create everything from scratch to suit my preferences. All the projects and designs are completely made by me, no tutorials or templates were used.'
+								"I specialize in performance tuning, API security, and smart routing with tools like EHCache, JWT, and Kong Gateway. Currently expanding my skills in GraphQL and modern async patterns."
 							}
 						</motion.p>
 						<motion.p variants={text}>
 							{
-								"Besides programming, I enjoy playing video games, editing photos and videos, and tinkering with small electronic projects in my free time."
+								"I recharge by diving into books, folding origami for mindfulness, and writing to distill thoughts into words. These hobbies fuel both my focus and creativity—whether it’s crafting clean API structures or untangling complex backend logic."
 							}
 						</motion.p>
 						<TechStack variants={text} />
