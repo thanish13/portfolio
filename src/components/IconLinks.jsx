@@ -44,15 +44,6 @@ const iconStyle = "opacity-40 group-hover:opacity-80 duration-500";
 const iconsRemap = {
 	github: <FiGithub size={48} strokeWidth={1.2} fill="#101010" className={iconStyle} />,
 	twitter: <RiTwitterXLine size={48} className={iconStyle} />,
-	youtube: <FiYoutube size={52} strokeWidth={1.2} fill="#101010" className={iconStyle} />,
-	steam: (
-		<TbBrandSteam
-			size={52}
-			strokeWidth={1.2}
-			fill="#101010"
-			className={cn(iconStyle, "social-stroke")}
-		/>
-	),
 	email: <FiMail size={52} strokeWidth={1.2} fill="#101010" className={iconStyle} />,
 	React: <SiReact size={36} className={iconStyle} />,
 	"Tailwind CSS": <SiTailwindcss size={36} className={iconStyle} />,
