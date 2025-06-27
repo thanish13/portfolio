@@ -124,8 +124,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 				{/* Show socials, name, title and performance option below logo */}
 				{firstLayoutAnimationComplete && (
 					<>
-						<IconLinks icons={icons.socials} direction={-20} />
-						{/* Name and title */}
+					{/* Name and title */}
 						<div className="relative w-full flex flex-col items-center justify-center">
 							<AnimatedText
 								text="Thanish"
