@@ -1,38 +1,4 @@
 {
-	"socials": [
-		{
-			"name": "GitHub",
-			"link": "https://github.com/Thanish",
-			"icon": "github"
-		},
-		{
-			"name": "Twitter / X",
-			"link": "https://twitter.com/Thanish",
-			"icon": "twitter"
-		},
-		{
-			"name": "YouTube",
-			"link": "https://www.youtube.com/@theThanish",
-			"icon": "youtube"
-		},
-		{
-			"name": "Steam",
-			"link": "https://steamcommunity.com/id/Thanish/",
-			"icon": "steam"
-		}
-	],
-	"contact": [
-		{
-			"name": "Twitter / X",
-			"link": "https://twitter.com/Thanish",
-			"icon": "twitter"
-		},
-		{
-			"name": "Email",
-			"link": "mailto:Thanishdev@gmail.com",
-			"icon": "email"
-		}
-	],
 	"tech": [
 		{
 			"name": "HTML",

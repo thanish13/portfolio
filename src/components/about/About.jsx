@@ -115,8 +115,6 @@ const About = ({ delayAnimation, performanceMode }) => {
 							<br className="inline-block tablet:hidden" />
 							{"I'm always open to new adventures! :)"}
 						</motion.p>
-
-						{/* <Contact /> */}
 					</div>
 				</motion.div>
 				{/* This allows mobile view to smoothly transition to correct size */}
