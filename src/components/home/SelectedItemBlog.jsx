@@ -36,19 +36,18 @@ const SelectedItemBlog = ({ item, isMobile, performanceMode }) => {
 				exit="exit"
 				variants={!performanceMode ? containerVariant : null}
 				className={cn(
-					"w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow",
+					" w-full h-full overflow-hidden flex flex-col items-center justify-center gap-6 px-2 py-4 z-10 drop-shadow",
 					performanceMode && "drop-shadow-none"
 				)}>
 				<motion.div
-				variants={itemVariant}
-				custom={performanceMode}
-				style={{ position: "absolute",
-						 top: 0,
-						 right: 0,}}>
+					className="fixed top-0 right-0"
+					variants={itemVariant}
+					custom={performanceMode}
+				>
 					<CloseButton/>
 				</motion.div>
 				{/* Title and Badges */}
-				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1">
+				<div className="w-full flex flex-col items-center gap-2 tablet:gap-1" >
 					{/* Name and Year */}
 					<div className="flex items-center gap-2 tablet:-mt-1">
 						<motion.h1

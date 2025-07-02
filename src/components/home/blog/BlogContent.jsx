@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 import ReactMarkDown from 'react-markdown';
 
@@ -15,11 +16,11 @@ function BlogContent() {
 	});
 
 	return (
-		<div class="prose prose-slate dark:prose-invert">
+		<motion.div class="overall-scroll-auto prose prose-slate dark:prose-invert">
 			<ReactMarkDown>
                 {post}
 			</ReactMarkDown>
-		</div>
+		</motion.div>
 	);
 }
 
