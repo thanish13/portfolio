@@ -14,10 +14,22 @@ import {
 	SiSupabase,
 	SiDiscord,
 	SiFirebase,
-} from "react-icons/si";
+	SiSpringboot,
+	SiApachemaven,
+	SiHibernate,
+	SiOracle,
+	SiPostgresql,
+	SiApachekafka,
+	SiApache,
+	SiKibana,
+	SiSwagger,
+	SiAzuredevops,
+	SiGraphql,
+	SiGooglecloud} from "react-icons/si";
 import { IoLogoElectron } from "react-icons/io5";
 import { PiFileCssLight, PiFileHtmlLight } from "react-icons/pi";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
+import { BiLogoGit, BiLogoJava, BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
+
 
 // Animation variants
 const containerVariants = {
@@ -42,25 +54,22 @@ const iconStyle = "opacity-40 group-hover:opacity-80 duration-500";
 
 // Remap icon names to actual icons
 const iconsRemap = {
-	github: <FiGithub size={48} strokeWidth={1.2} fill="#101010" className={iconStyle} />,
-	twitter: <RiTwitterXLine size={48} className={iconStyle} />,
-	email: <FiMail size={52} strokeWidth={1.2} fill="#101010" className={iconStyle} />,
+	Java: <BiLogoJava size={36} className={iconStyle} />,
+	SpringBoot: <SiSpringboot size={36} className={iconStyle} />,
+	Maven: <SiApachemaven size={36} className={iconStyle} />,
+	AzureDevOps : <SiAzuredevops size={36} className={iconStyle} />,
+	Oracle : <SiOracle size={36} className={iconStyle} />,
+	PostgresSQL : <SiPostgresql size={36} className={iconStyle} />,
+	Kafka : <SiApachekafka size={36} className={iconStyle} />,
+	Kibana : <SiKibana size={36} className={iconStyle} />,
+	Swagger : <SiSwagger size={36} className={iconStyle} />,
 	React: <SiReact size={36} className={iconStyle} />,
 	"Tailwind CSS": <SiTailwindcss size={36} className={iconStyle} />,
 	"Framer Motion": <TbBrandFramerMotion size={36} className={iconStyle} />,
-	MongoDB: <SiMongodb size={36} className={iconStyle} />,
-	Express: <SiExpress size={36} className={iconStyle} />,
-	Redux: <SiRedux size={36} className={iconStyle} />,
 	"Node.js": <SiNodedotjs size={36} className={iconStyle} />,
-	OpenAI: <SiOpenai size={36} className={iconStyle} />,
-	Supabase: <SiSupabase size={36} className={iconStyle} />,
-	Electron: <IoLogoElectron size={36} className={iconStyle} />,
-	HTML: <PiFileHtmlLight size={36} className={iconStyle} />,
-	CSS: <PiFileCssLight size={36} className={iconStyle} />,
-	JavaScript: <BiLogoJavascript size={40} className={iconStyle} />,
-	TypeScript: <BiLogoTypescript size={40} className={iconStyle} />,
-	"Discord.js": <SiDiscord size={36} className={iconStyle} />,
-	Firebase: <SiFirebase size={36} className={iconStyle} />,
+	GraphQL: <SiGraphql size={36} className={iconStyle} />,
+	gRPC: <SiGooglecloud size={36} className={iconStyle} />,
+	JavaScript: <BiLogoJavascript size={40} className={iconStyle} />
 };
 
 const IconLinks = ({ icons, direction, style = null, itemStyle = null, tooltipStyle = null }) => {
@@ -85,12 +94,13 @@ const IconLinks = ({ icons, direction, style = null, itemStyle = null, tooltipSt
 						target="_blank"
 						rel="noopener noreferrer"
 						href={item.link}
-						className="h-full w-full flex items-center justify-center z-10">
+						className="h-full w-full flex items-center justify-center z-10 hover:text-sky-600"
+						>
 						{iconsRemap[item.icon]}
 						{/* Tooltip */}
 						<span
 							className={cn(
-								"absolute -bottom-5 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-8 group-hover:scale-100 duration-300 z-0 text-nowrap pointer-events-none",
+								"absolute -bottom-5 scale-75 px-3 py-2 bg-primary rounded-lg text-sm shadow-xl opacity-0 group-hover:opacity-100 group-hover:-bottom-8 group-hover:scale-100 duration-300 z-0 text-nowrap pointer-events-none text-sky-600",
 								tooltipStyle
 							)}>
 							{item.name}

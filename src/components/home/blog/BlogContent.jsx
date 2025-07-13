@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 import ReactMarkDown from 'react-markdown';
 
-function BlogContent() {
+function BlogContent({content}) {
 	const [post, setPost] = useState('');
 	useEffect(() => {
-		import('../../../../public/assets/index.md')
+		import('../../../../public' + content)
 			.then(res => {
 				fetch(res.default)
 					.then(res => res.text())

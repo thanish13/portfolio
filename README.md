@@ -1,15 +1,6 @@
-![Banner](https://i.imgur.com/LKhoc9f.png)
-
 <h1 align="center">Thanish.dev</h1>
 
 <p align="center">A React-based website showcasing my projects and providing more information about myself.</br>Built with a design-first approach, emphasizing smooth animations and transitions handcrafted with Framer Motion.</p>
-
-## Live Site
-
-Check out the live version of the website:
-[Thanish.dev](https://Thanish.dev/)
-
-![Screenshots](https://i.imgur.com/makqbpP.png)
 
 ## Features
 

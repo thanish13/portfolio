@@ -1,14 +1,59 @@
 {
 	"tech": [
 		{
-			"name": "HTML",
-			"link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
-			"icon": "HTML"
+			"name": "Java",
+			"link": "https://java.org/",
+			"icon": "Java"
 		},
 		{
-			"name": "CSS",
+			"name": "SpringBoot",
+			"link": "https://www.springboot.org/",
+			"icon": "SpringBoot"
+		},
+		{
+			"name": "Maven",
+			"link": "https://www.springboot.org/",
+			"icon": "Maven"
+		},
+		{
+			"name": "AzureDevOps",
+			"link": "https://www.springboot.org/",
+			"icon": "AzureDevOps"
+		},
+		{
+			"name": "Oracle",
+			"link": "https://www.springboot.org/",
+			"icon": "Oracle"
+		},
+		{
+			"name": "PostgresSQL",
+			"link": "https://www.springboot.org/",
+			"icon": "PostgresSQL"
+		},
+		{
+			"name": "Kafka",
+			"link": "https://www.springboot.org/",
+			"icon": "Kafka"
+		},
+		{
+			"name": "Kibana",
+			"link": "https://www.springboot.org/",
+			"icon": "Kibana"
+		},
+		{
+			"name": "Swagger",
+			"link": "https://www.springboot.org/",
+			"icon": "Swagger"
+		},
+		{
+			"name": "GraphQL",
+			"link": "https://developer.mozilla.org/en-US/docs/Web/HTML",
+			"icon": "GraphQL"
+		},
+		{
+			"name": "gRPC",
 			"link": "https://developer.mozilla.org/en-US/docs/Web/CSS",
-			"icon": "CSS"
+			"icon": "gRPC"
 		},
 		{
 			"name": "JavaScript",
@@ -16,19 +61,9 @@
 			"icon": "JavaScript"
 		},
 		{
-			"name": "TypeScript",
-			"link": "https://www.typescriptlang.org/",
-			"icon": "TypeScript"
-		},
-		{
 			"name": "React",
 			"link": "https://reactjs.org/",
 			"icon": "React"
-		},
-		{
-			"name": "Electron",
-			"link": "https://www.electronjs.org/",
-			"icon": "Electron"
 		},
 		{
 			"name": "Tailwind CSS",
@@ -44,41 +79,6 @@
 			"name": "Node.js",
 			"link": "https://nodejs.org/",
 			"icon": "Node.js"
-		},
-		{
-			"name": "Redux",
-			"link": "https://redux.js.org/",
-			"icon": "Redux"
-		},
-		{
-			"name": "Express",
-			"link": "https://expressjs.com/",
-			"icon": "Express"
-		},
-		{
-			"name": "Firebase",
-			"link": "https://firebase.google.com/",
-			"icon": "Firebase"
-		},
-		{
-			"name": "MongoDB",
-			"link": "https://www.mongodb.com/",
-			"icon": "MongoDB"
-		},
-		{
-			"name": "Supabase",
-			"link": "https://supabase.io/",
-			"icon": "Supabase"
-		},
-		{
-			"name": "OpenAI",
-			"link": "https://www.openai.com/",
-			"icon": "OpenAI"
-		},
-		{
-			"name": "Discord.js",
-			"link": "https://discord.js.org/",
-			"icon": "Discord.js"
 		}
 	]
 }

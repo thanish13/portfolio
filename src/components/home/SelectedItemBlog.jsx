@@ -77,7 +77,7 @@ const SelectedItemBlog = ({ item, isMobile, performanceMode }) => {
 				</div>
 				{/* Description */}
 				
-				<BlogContent/>
+				<BlogContent content={item.content}/>
 
 				{/* Links */}
 				<motion.div
