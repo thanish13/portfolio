@@ -1,34 +1,21 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiYoutube, FiMail } from "react-icons/fi";
-import { RiTwitterXLine } from "react-icons/ri";
 import { TbBrandFramerMotion, TbBrandSteam } from "react-icons/tb";
 import { cn } from "../../lib/utils";
 import {
 	SiReact,
 	SiTailwindcss,
-	SiMongodb,
-	SiExpress,
-	SiRedux,
 	SiNodedotjs,
-	SiOpenai,
-	SiSupabase,
-	SiDiscord,
-	SiFirebase,
 	SiSpringboot,
 	SiApachemaven,
-	SiHibernate,
 	SiOracle,
 	SiPostgresql,
 	SiApachekafka,
-	SiApache,
 	SiKibana,
 	SiSwagger,
 	SiAzuredevops,
 	SiGraphql,
 	SiGooglecloud} from "react-icons/si";
-import { IoLogoElectron } from "react-icons/io5";
-import { PiFileCssLight, PiFileHtmlLight } from "react-icons/pi";
-import { BiLogoGit, BiLogoJava, BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
+import {BiLogoJava, BiLogoJavascript } from "react-icons/bi";
 
 
 // Animation variants

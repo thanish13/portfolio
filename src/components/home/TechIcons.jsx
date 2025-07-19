@@ -1,3 +1,5 @@
+import { TbBrandFramerMotion } from "react-icons/tb";
+import { motion } from "framer-motion";
 import {
 	SiReact,
 	SiTailwindcss,
@@ -7,37 +9,43 @@ import {
 	SiNodedotjs,
 	SiOpenai,
 	SiSupabase,
-	SiUnity,
-	SiCsharp,
 	SiDiscord,
 	SiFirebase,
-} from "react-icons/si";
-import { IoLogoElectron } from "react-icons/io5";
-import { PiFileHtmlBold, PiFileCssBold } from "react-icons/pi";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { motion } from "framer-motion";
-import { BiLogoJavascript, BiLogoTypescript } from "react-icons/bi";
+	SiSpringboot,
+	SiApachemaven,
+	SiHibernate,
+	SiOracle,
+	SiPostgresql,
+	SiApachekafka,
+	SiApache,
+	SiKibana,
+	SiSwagger,
+	SiAzuredevops,
+	SiGraphql,
+	SiGooglecloud} from "react-icons/si";
+import { BiLogoJava, BiLogoJavascript } from "react-icons/bi";
+
+
+const iconStyle = "w-4 h-4";
 
 // Remap icon names to actual icons
 const remapIcons = {
-	React: <SiReact className="w-4 h-4" />,
-	"Tailwind CSS": <SiTailwindcss className="w-4 h-4" />,
-	"Framer Motion": <TbBrandFramerMotion className="w-4 h-4" />,
-	MongoDB: <SiMongodb className="w-2 h-4 scale-[1.8]" />,
-	Express: <SiExpress className="w-4 h-4 scale-110" />,
-	Redux: <SiRedux className="w-4 h-4" />,
-	"Node.js": <SiNodedotjs className="w-4 h-4" />,
-	OpenAI: <SiOpenai className="w-4 h-4" />,
-	Supabase: <SiSupabase className="w-4 h-4" />,
-	Electron: <IoLogoElectron className="w-4 h-4" />,
-	HTML: <PiFileHtmlBold className="w-4 h-4" />,
-	CSS: <PiFileCssBold className="w-4 h-4" />,
-	JavaScript: <BiLogoJavascript className="w-4 h-4" />,
-	TypeScript: <BiLogoTypescript className="w-4 h-4" />,
-	Unity: <SiUnity className="w-4 h-4" />,
-	"C#": <SiCsharp className="w-4 h-4" />,
-	"Discord.js": <SiDiscord className="w-4 h-4" />,
-	Firebase: <SiFirebase className="w-4 h-4" />,
+		Java: <BiLogoJava className={iconStyle} />,
+		SpringBoot: <SiSpringboot className={iconStyle} />,
+		Maven: <SiApachemaven className={iconStyle} />,
+		AzureDevOps : <SiAzuredevops className={iconStyle} />,
+		Oracle : <SiOracle className={iconStyle} />,
+		PostgresSQL : <SiPostgresql className={iconStyle} />,
+		Kafka : <SiApachekafka className={iconStyle} />,
+		Kibana : <SiKibana className={iconStyle} />,
+		Swagger : <SiSwagger className={iconStyle} />,
+		React: <SiReact className={iconStyle} />,
+		"Tailwind CSS": <SiTailwindcss className={iconStyle} />,
+		"Framer Motion": <TbBrandFramerMotion className={iconStyle} />,
+		"Node.js": <SiNodedotjs className={iconStyle} />,
+		GraphQL: <SiGraphql className={iconStyle} />,
+		gRPC: <SiGooglecloud className={iconStyle} />,
+		JavaScript: <BiLogoJavascript className={iconStyle} />
 };
 
 const TechIcons = ({ items, variant, performanceMode = false, badge = false }) => {
