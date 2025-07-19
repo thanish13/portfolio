@@ -1,4 +1,16 @@
 {
+	"socials": [
+		{
+			"name": "GitHub",
+			"link": "https://github.com/thanish13",
+			"icon": "Github"
+		},
+		{
+			"name": "LinkedIn",
+			"link": "https://www.linkedin.com/in/thanish-malai/",
+			"icon": "LinkedIn"
+		}
+	],
 	"tech": [
 		{
 			"name": "Java",

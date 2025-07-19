@@ -138,6 +138,7 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 								duration={0.2}
 								style="text-xl leading-none opacity-50"
 							/>
+							<br/>
 							<motion.button
 								initial={{ y: -12, opacity: 0 }}
 								animate={{ y: 0, opacity: 1 }}
@@ -154,6 +155,8 @@ const Logo = ({ setIntroAnimationOver, performanceMode, setPerformanceMode }) =>
 									</p>
 								</div>
 							</motion.button>
+						<IconLinks icons={icons.socials} />
+						<br/>
 						</div>
 					</>
 				)}

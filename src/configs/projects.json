@@ -11,10 +11,7 @@
 			"/assets/projects/muistio/muistio-4.webp"
 		],
 		"year": "17 July, 2025",
-		"links": [
-			{ "type": "code", "url": "https://github.com/Thanish/Muistio" },
-			{ "type": "live", "url": "https://muistio.Thanish.dev/" }
-		],
+		"links": [],
 		"tech": ["Java"]
 	}
 ]

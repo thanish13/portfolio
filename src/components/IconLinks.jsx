@@ -14,7 +14,9 @@ import {
 	SiSwagger,
 	SiAzuredevops,
 	SiGraphql,
-	SiGooglecloud} from "react-icons/si";
+	SiGooglecloud,
+	SiGithub,
+	SiLinkedin} from "react-icons/si";
 import {BiLogoJava, BiLogoJavascript } from "react-icons/bi";
 
 
@@ -56,7 +58,9 @@ const iconsRemap = {
 	"Node.js": <SiNodedotjs size={36} className={iconStyle} />,
 	GraphQL: <SiGraphql size={36} className={iconStyle} />,
 	gRPC: <SiGooglecloud size={36} className={iconStyle} />,
-	JavaScript: <BiLogoJavascript size={40} className={iconStyle} />
+	JavaScript: <BiLogoJavascript size={40} className={iconStyle} />,
+	Github : <SiGithub size={64} className={iconStyle} />,
+	LinkedIn : <SiLinkedin size={64} className={iconStyle} />
 };
 
 const IconLinks = ({ icons, direction, style = null, itemStyle = null, tooltipStyle = null }) => {
@@ -65,7 +69,7 @@ const IconLinks = ({ icons, direction, style = null, itemStyle = null, tooltipSt
 			initial="hidden"
 			animate="visible"
 			variants={containerVariants}
-			className={cn("tablet:h-14 px-10 tablet:px-0 w-full flex justify-between", style)}>
+			className={cn("tablet:h-14 px-10 tablet:px-0 w-full flex justify-center gap-x-10", style)}>
 			{icons.map((item, i) => (
 				<motion.li
 					key={item.name}
