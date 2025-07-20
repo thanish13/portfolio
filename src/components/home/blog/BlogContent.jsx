@@ -6,7 +6,7 @@ function BlogContent({content}) {
 
 	const [post, setPost] = useState('');
 
-	const filePath = '/src/components/home/blog/markdown' + content;
+	const filePath = '/public/assets/Blog/001/index.md';
 
 	useEffect(() => {
 		import(filePath)
