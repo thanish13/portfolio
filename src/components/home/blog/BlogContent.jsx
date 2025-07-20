@@ -1,13 +1,15 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Component } from 'react';
 import { motion } from "framer-motion";
 import ReactMarkDown from 'react-markdown';
 
 function BlogContent({content}) {
 
-
 	const [post, setPost] = useState('');
+
+	const filePath = '/src/components/home/blog/markdown' + content;
+
 	useEffect(() => {
-		import('./markdown' + content)
+		import(filePath)
 			.then(res => {
 				fetch(res.default)
 					.then(res => res.text())
