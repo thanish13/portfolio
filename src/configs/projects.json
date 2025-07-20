@@ -2,7 +2,7 @@
 	{	"type" : "blog",
 		"title": "Java Demystified",
 		"description": "A secure Markdown editor built with React for quick notes and detailed documents. All files are encrypted locally before storing them securely in Firebase.",
-		"content" : "/assets/Blog/01-Java Demystified/index.md",
+		"content" : "/01-Java Demystified/index.md",
 		"thumbnail": "/assets/blog-background.jpeg",
 		"images": [
 			"/assets/projects/muistio/muistio-1.webp",
