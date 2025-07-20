@@ -5,11 +5,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	assetsInclude: ["**/*.md"],
-	resolve:{
-		alias : {
-		 '@components': './src/components/home/blog/markdown',
-		}
-	},
+	publicDir: './public',
 	build: {
 		rollupOptions: {
 			output: {
