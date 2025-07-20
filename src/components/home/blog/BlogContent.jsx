@@ -6,7 +6,7 @@ function BlogContent({content}) {
 
 	const [post, setPost] = useState('');
 
-	const filePath = '/assets/Blog/001/index.md';
+	const filePath = 'assets/blog/001/index.md';
 
 	useEffect(() => {
 		import(filePath)
