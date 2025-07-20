@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from "framer-motion";
-
 import ReactMarkDown from 'react-markdown';
 
 function BlogContent({content}) {
+
+
 	const [post, setPost] = useState('');
 	useEffect(() => {
 		import('./markdown' + content)
