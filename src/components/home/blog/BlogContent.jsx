@@ -1,30 +1,31 @@
-import { useState, useEffect, Component } from 'react';
 import { motion } from "framer-motion";
 import ReactMarkDown from 'react-markdown';
+import mc from '../../../../public/assets/blog/001/index.md'
+import { Component } from 'react';
 
-function BlogContent({content}) {
+class BlogContent extends Component {
 
-	const [post, setPost] = useState('');
+  constructor() {
+    super();
+    this.state = { markdown: '' };
+  }
 
-	const filePath = 'assets/blog/001/index.md';
+  componentWillMount() {
+    // Get the contents from the Markdown file and put them in the React state, so we can reference it in render() below.
+    fetch(mc).then(res => res.text()).then(text => this.setState({ markdown: text }));
+  }
 
-	useEffect(() => {
-		import(filePath)
-			.then(res => {
-				fetch(res.default)
-					.then(res => res.text())
-					.then(res => setPost(res));
-			})
-			.catch(err => console.log(err));
-	});
+  render() {
+    const { markdown } = this.state;
 
-	return (
-		<motion.div class="overall-scroll-auto prose prose-slate dark:prose-invert">
+    return (
+      <motion.div class="overall-scroll-auto prose prose-slate dark:prose-invert">
 			<ReactMarkDown>
-                {post}
+                {markdown}
 			</ReactMarkDown>
 		</motion.div>
-	);
+    );
+  }
 }
 
 export default BlogContent;
