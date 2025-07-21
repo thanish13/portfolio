@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import ReactMarkDown from 'react-markdown';
-import mc from './index.md'
+import mc from '../blog/index.md'
 import { Component } from 'react';
 
 class BlogContent extends Component {
