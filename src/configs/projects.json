@@ -1,17 +1,97 @@
 [
-	{	"type" : "blog",
-		"title": "Java Demystified",
-		"description": "A secure Markdown editor built with React for quick notes and detailed documents. All files are encrypted locally before storing them securely in Firebase.",
-		"content" : "/001/index.md",
+	{
+		"type": "blog",
+		"title": "Spring Kafka",
+		"description": "",
+		"content": "007",
 		"thumbnail": "/assets/blog-background.jpeg",
-		"images": [
-			"/assets/projects/muistio/muistio-1.webp",
-			"/assets/projects/muistio/muistio-2.webp",
-			"/assets/projects/muistio/muistio-3.webp",
-			"/assets/projects/muistio/muistio-4.webp"
-		],
-		"year": "17 July, 2025",
+		"images": [],
+		"year": "21 July, 2025",
 		"links": [],
-		"tech": ["Java"]
+		"tech": [
+			"Java",
+			"Kafka"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "JAX-RS",
+		"description": "",
+		"content": "006",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "19 July, 2025",
+		"links": [],
+		"tech": [
+			"Java",
+			"SpringBoot"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "Spring MVC",
+		"description": "",
+		"content": "005",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "13 July, 2025",
+		"links": [],
+		"tech": [
+			"Java",
+			"SpringBoot"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "Intro to Spring Boot",
+		"description": "",
+		"content": "004",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "11 July, 2025",
+		"links": [],
+		"tech": [
+			"Java",
+			"SpringBoot"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "Microservice Principles",
+		"description": "",
+		"content": "003",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "07 July, 2025",
+		"links": [],
+		"tech": [
+			"Java"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "Solid Principles",
+		"description": "",
+		"content": "002",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "26 June, 2025",
+		"links": [],
+		"tech": [
+			"Java"
+		]
+	},
+	{
+		"type": "blog",
+		"title": "Java Demystified",
+		"description": "",
+		"content": "001",
+		"thumbnail": "/assets/blog-background.jpeg",
+		"images": [],
+		"year": "17 June, 2025",
+		"links": [],
+		"tech": [
+			"Java"
+		]
 	}
 ]
