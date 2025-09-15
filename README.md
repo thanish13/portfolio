@@ -25,8 +25,8 @@ To run the project locally:
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/Thanish/Thanish.dev.git
-   cd Thanish.dev
+   git clone https://github.com/thanish13/portfolio.git
+   cd portfolio
    ```
 
 2. **Install dependencies:**
